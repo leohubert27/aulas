@@ -1,9 +1,9 @@
 class Stack {
-    constructor () {
+    constructor() {
         this.items = []; // {1}
     }
 
-    push (element) {
+    push(element) {
         this.items.push(element);
     }
 
@@ -12,15 +12,15 @@ class Stack {
     }
 
     peek() {
-        return this.items[this.items.lenght - 1];
+        return this.items[this.items.length - 1]; // Corrigido para length
     }
 
     isEmpty() {
-        return this.items.lenght === 0;
+        return this.items.length === 0; // Corrigido para length
     }
 
     size() {
-        return this.items.lenght;
+        return this.items.length; // Corrigido para length
     }
 
     clear() {
@@ -29,16 +29,16 @@ class Stack {
 }
 
 const stack = new Stack();
-console.log(stack.isEmpty()) //vai exibir true
-stack.push(5)
-stack.push(8)
+console.log(stack.isEmpty()); // Vai exibir true
+stack.push(5);
+stack.push(8);
 
-console.log(stack.peek()) // exibe 8
+console.log(stack.peek()); // Exibe 8
 
 stack.push(11);
-console.log(stack.size()) // exibe 3
-console.log(stack.isEmpty()) //exibe que é falso
+console.log(stack.size()); // Exibe 3
+console.log(stack.isEmpty()); // Exibe false
 
-stack.pop()
-stack.pop()
-console.log(stack.size()) // exibe 2
+stack.pop();
+stack.pop();
+console.log(stack.size()); // Exibe 1
